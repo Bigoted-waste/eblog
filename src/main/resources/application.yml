@@ -1,0 +1,20 @@
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates
+    cache: false
+    charset: utf-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .ftl
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/e_blog?useUnicode==true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123
+
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
