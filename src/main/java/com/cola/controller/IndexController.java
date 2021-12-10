@@ -14,6 +14,8 @@ public class IndexController extends BaseController{
 
         int pn = ServletRequestUtils.getIntParameter(req,"pn",1);
         int size = ServletRequestUtils.getIntParameter(req,"size",2);
+
+        // Mybatis-plus 内置的类
         Page page=new Page(pn,size);
 
         // 1,分页信息  2,分类  3,用户  4,置顶  5,精选  6,排序

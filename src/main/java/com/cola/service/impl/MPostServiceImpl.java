@@ -7,6 +7,7 @@ import com.cola.entity.MPost;
 import com.cola.mapper.MPostMapper;
 import com.cola.service.MPostService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.cola.vo.PostVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +26,7 @@ public class MPostServiceImpl extends ServiceImpl<MPostMapper, MPost> implements
     MPostMapper postMapper;
 
     @Override
-    public IPage paging(Page page, Long categoryId, Long userId, Integer level, Boolean recommend, String order) {
+    public IPage<PostVo> paging(Page page, Long categoryId, Long userId, Integer level, Boolean recommend, String order) {
 
         if (level == null) {
             level = -1;
